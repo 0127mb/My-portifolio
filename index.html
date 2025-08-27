@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      color: #4e54c8;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #4e54c8;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    /* Skills */
+    .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .skills span {
+      background: #4e54c8;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 25px;
+      font-size: 1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .skills span:hover {
+      transform: scale(1.1);
+    }
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .project {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .project img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-content {
+      padding: 20px;
+      text-align: center;
+    }
+    .project h3 {
+      margin-bottom: 10px;
+      color: #4e54c8;
+    }
+    .project p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+    .project a {
+      display: inline-block;
+      margin: 5px;
+      text-decoration: none;
+      color: white;
+      background: #4e54c8;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .project a:hover {
+      background: #2c2f80;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #8f94fb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1><span id="typed"></span></h1>
+    <p>HTML | CSS | JavaScript</p>
+  </header>
+
+  <!-- About Me -->
+  <section>
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      I am a creative web developer specializing in modern and responsive websites using HTML, CSS, and JavaScript. 
+      I love building apps that are both functional and user-friendly. Below you can explore some of my demo projects.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Responsive Design</span>
+      <span>API Integration</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200?text=Chart+Project" alt="Chart Project">
+        <div class="project-content">
+          <h3>Chart Project</h3>
+          <p>A dynamic chart built with JavaScript.</p>
+          <a href="https://0127mb.github.io/chart/" target="_blank">Live Demo</a>
+          <a href="https://github.com/0127mb/chart" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200?text=QR+Code+Generator" alt="QR Code Generator">
+        <div class="project-content">
+          <h3>QR Code Generator</h3>
+          <p>Generate QR codes easily with JavaScript.</p>
+          <a href="https://0127mb.github.io/qrcode/" target="_blank">Live Demo</a>
+          <a href="https://github.com/0127mb/qrcode" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200?text=Translator+App" alt="Translator App">
+        <div class="project-content">
+          <h3>Translator App</h3>
+          <p>Translate text between languages using an API.</p>
+          <a href="https://0127mb.github.io/transletor/" target="_blank">Live Demo</a>
+          <a href="https://github.com/0127mb/transletor" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200?text=Mock+API+App" alt="Mock API App">
+        <div class="project-content">
+          <h3>Mock API App</h3>
+          <p>Fetch and display data from a mock API.</p>
+          <a href="https://0127mb.github.io/mok-api/" target="_blank">Live Demo</a>
+          <a href="https://github.com/0127mb/mok-api" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200?text=Currency+Converter" alt="Currency Converter">
+        <div class="project-content">
+          <h3>Currency Converter</h3>
+          <p>Convert currencies in real time using API.</p>
+          <a href="https://0127mb.github.io/derr/" target="_blank">Live Demo</a>
+          <a href="https://github.com/0127mb/derr" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200?text=Weather+App" alt="Weather App">
+        <div class="project-content">
+          <h3>Weather App</h3>
+          <p>Check live weather data for any city.</p>
+          <a href="https://0127mb.github.io/weather/" target="_blank">Live Demo</a>
+          <a href="https://github.com/0127mb/weather" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer>
+    <p>📩 Contact: 201027rembo@gmail.com | 🌐 Fiverr: <a href="https://fiverr.com/yourprofile" target="_blank">fiverr.com/yourprofile</a></p>
+  </footer>
+
+  <!-- Typed.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed("#typed", {
+      strings: ["I am a Web Developer", "I Build Responsive Websites", "I Love JavaScript"],
+      typeSpeed: 70,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>
